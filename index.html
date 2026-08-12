@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمد أحمد | محلل بيانات</title>
+  <meta name="description" content="الموقع الشخصي لمحمد أحمد، طالب إدارة أعمال (تخصص نظم معلومات إدارية BIS) بجامعة قنا الأهلية، ومهتم بمجال تحليل البيانات.">
+
+  <!-- ===== Google Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&family=Cairo:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ===== Font Awesome ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#hero" class="navbar__logo">
+        <span class="navbar__logo-bracket">&lt;</span>MA<span class="navbar__logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#hero" class="navbar__link">الرئيسية</a>
+        <a href="#skills" class="navbar__link">المهارات</a>
+        <a href="#projects" class="navbar__link">المشاريع</a>
+        <a href="#gallery" class="navbar__link">المعرض</a>
+        <a href="#music" class="navbar__link">الموسيقى</a>
+        <a href="#contact" class="navbar__link">تواصل معي</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="تبديل المظهر">
+          <i class="fa-solid fa-sun theme-toggle__icon theme-toggle__icon--sun"></i>
+          <i class="fa-solid fa-moon theme-toggle__icon theme-toggle__icon--moon"></i>
+        </button>
+        <button id="navToggle" class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero" id="hero">
+    <div class="hero__chart-anim" aria-hidden="true">
+      <svg viewBox="0 0 1600 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="chartAreaGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" class="chart-stop-accent"></stop>
+            <stop offset="100%" class="chart-stop-transparent"></stop>
+          </linearGradient>
+        </defs>
+
+        <g class="chart-grid">
+          <line x1="0" y1="40" x2="1600" y2="40"></line>
+          <line x1="0" y1="80" x2="1600" y2="80"></line>
+          <line x1="0" y1="120" x2="1600" y2="120"></line>
+          <line x1="0" y1="160" x2="1600" y2="160"></line>
+          <line x1="200" y1="0" x2="200" y2="220"></line>
+          <line x1="400" y1="0" x2="400" y2="220"></line>
+          <line x1="600" y1="0" x2="600" y2="220"></line>
+          <line x1="800" y1="0" x2="800" y2="220"></line>
+          <line x1="1000" y1="0" x2="1000" y2="220"></line>
+          <line x1="1200" y1="0" x2="1200" y2="220"></line>
+          <line x1="1400" y1="0" x2="1400" y2="220"></line>
+        </g>
+
+        <path class="chart-line chart-line--muted" d="M0,200 L200,190 L400,150 L600,170 L800,130 L1000,150 L1200,110 L1400,130 L1600,100"></path>
+        <path class="chart-area" fill="url(#chartAreaGradient)" d="M0,180 L200,140 L400,160 L600,100 L800,120 L1000,70 L1200,90 L1400,40 L1600,60 L1600,220 L0,220 Z"></path>
+        <path id="chartMainLine" class="chart-line chart-line--main" d="M0,180 L200,140 L400,160 L600,100 L800,120 L1000,70 L1200,90 L1400,40 L1600,60"></path>
+
+        <g class="chart-dots">
+          <circle cx="0" cy="180" r="4"></circle>
+          <circle cx="200" cy="140" r="4"></circle>
+          <circle cx="400" cy="160" r="4"></circle>
+          <circle cx="600" cy="100" r="4"></circle>
+          <circle cx="800" cy="120" r="4"></circle>
+          <circle cx="1000" cy="70" r="4"></circle>
+          <circle cx="1200" cy="90" r="4"></circle>
+          <circle cx="1400" cy="40" r="4"></circle>
+          <circle cx="1600" cy="60" r="4"></circle>
+        </g>
+
+        <g class="chart-traveler">
+          <circle r="9" class="chart-traveler__glow"></circle>
+          <circle r="4" class="chart-traveler__dot"></circle>
+          <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#chartMainLine" xlink:href="#chartMainLine"></mpath>
+          </animateMotion>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="hero__eyebrow"><span class="pulse-dot"></span> أتعلم وأتطوّر باستمرار في تحليل البيانات</p>
+        <h1 class="hero__title">
+          أهلاً، أنا <span class="hero__title-accent">محمد أحمد</span><br>
+          أُحوّل البيانات إلى قرارات واضحة
+        </h1>
+        <p class="hero__desc">
+          طالب إدارة أعمال (تخصص نظم معلومات إدارية BIS) في جامعة قنا الأهلية، ومهتم بمجال تحليل البيانات.
+          تعلمت SQL، وأتعلم حاليًا Excel وTableau وPower BI وPython لنقل البيانات الخام إلى رؤى وقرارات واضحة.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">شاهد مشاريعي <i class="fa-solid fa-arrow-down-long"></i></a>
+          <a href="#contact" class="btn btn--ghost">تواصل معي</a>
+        </div>
+
+        <div class="hero__socials">
+          <a href="https://github.com/186755g" target="_blank" rel="noopener" class="social-icon social-icon--github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-ahmed-abu-ali" target="_blank" rel="noopener" class="social-icon social-icon--linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-icon social-icon--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/" target="_blank" rel="noopener" class="social-icon social-icon--x" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-icon social-icon--instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:mohamedd0103319@gmail.com" class="social-icon social-icon--email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__photo-card">
+           <img src="images/myphoto.png" alt="محمد أحمد" class="hero__photo-img"> 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS SECTION ================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <p class="section__eyebrow">// المهارات</p>
+      <h2 class="section__title">التقنيات التي أعمل بها</h2>
+      <p class="section__subtitle">مجموعة الأدوات واللغات التي أستخدمها لتحويل البيانات الخام إلى رؤى وقرارات.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card skill-card--sql"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+        <div class="skill-card skill-card--git"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+        <div class="skill-card skill-card--github"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+        <div class="skill-card skill-card--sas"><i class="fa-solid fa-chart-line"></i><span>SAS</span></div>
+        <div class="skill-card skill-card--n8n"><i class="fa-solid fa-diagram-project"></i><span>n8n</span></div>
+        <div class="skill-card skill-card--excel"><i class="fa-solid fa-file-excel"></i><span>Excel</span></div>
+        <div class="skill-card skill-card--powerbi"><i class="fa-solid fa-chart-pie"></i><span>Power BI</span></div>
+        <div class="skill-card skill-card--tableau"><i class="fa-solid fa-chart-column"></i><span>Tableau</span></div>
+        <div class="skill-card skill-card--python"><i class="fa-brands fa-python"></i><span>Python</span></div>
+        <div class="skill-card skill-card--docker"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <p class="section__eyebrow">// المشاريع</p>
+      <h2 class="section__title">مشاريع في رحلة تعلّمي</h2>
+      <p class="section__subtitle">مشاريع تدريبية عملت عليها أثناء تعلمي تحليل البيانات — يتم تحديثها باستمرار.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-card__cover" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80')"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">لوحة مبيعات تفاعلية (Power BI)</h3>
+            <p class="project-card__desc">بناء لوحة تحكم تفاعلية لتحليل بيانات المبيعات الشهرية، مع مؤشرات أداء رئيسية وفلاتر ديناميكية.</p>
+            <div class="project-card__tags">
+              <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Excel</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="btn btn--sm btn--ghost"><i class="fa-brands fa-github"></i> الكود</a>
+              <a href="#" class="btn btn--sm btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> تجربة حية</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__cover" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80')"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">تحليل قاعدة بيانات تجارية (SQL)</h3>
+            <p class="project-card__desc">كتابة استعلامات SQL لاستخراج وتحليل بيانات المبيعات والعملاء من قاعدة بيانات تجارية، وتحديد أنماط الشراء.</p>
+            <div class="project-card__tags">
+              <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Excel</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="btn btn--sm btn--ghost"><i class="fa-brands fa-github"></i> الكود</a>
+              <a href="#" class="btn btn--sm btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> تجربة حية</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__cover" style="background-image:url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80')"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">تصوّر بيانات كورونا (Tableau)</h3>
+            <p class="project-card__desc">تنظيف وتحليل بيانات كورونا العالمية وتحويلها للوحة Tableau تفاعلية توضح انتشار الفيروس عبر الزمن.</p>
+            <div class="project-card__tags">
+              <span class="tag">Tableau</span><span class="tag">Data Cleaning</span><span class="tag">Python</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="btn btn--sm btn--ghost"><i class="fa-brands fa-github"></i> الكود</a>
+              <a href="#" class="btn btn--sm btn--primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> تجربة حية</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALLERY SECTION ================= -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <p class="section__eyebrow">// المعرض</p>
+      <h2 class="section__title">لحظات أحتفظ بها</h2>
+      <p class="section__subtitle">صور من لحظاتي المفضلة — مرّر الماوس أو اضغط لرؤية التفاصيل.</p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="images/644085184257626351.jpeg" alt="JUST MEMES" loading="lazy">
+          <figcaption><h4>JUST MEMES</h4><p>لدي خبرة في تفكيك الأجهزة فقط</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/973692381953963070.jpeg" alt="لغتي المفضلة" loading="lazy">
+          <figcaption><h4>PYTHON</h4><p>اللغة التي أبحث عن مصادرها وأقرأ كتبها دون ملل هي بايثون</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/redsea.jpg" alt="RED SEA" loading="lazy">
+          <figcaption><h4>RED SEA</h4><p>THE SEA AT SUNRISE IS THE MOST BEAUTIFUL VIEW IN THE WORLD</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/457959855882831735.jpeg" alt="DRINK" loading="lazy">
+          <figcaption><h4>COFFEE</h4><p>I LOVE DRINKING A LOT OF COFFEE</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/1040683426397708769.jpeg" alt="الضغط" loading="lazy">
+          <figcaption><h4>الضغط</h4><p>أجيد العمل تحت ضغط الهواء العادي</p></figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/FPKHP[KJK.jpeg" alt="I LOVE GAMING" loading="lazy">
+          <figcaption><h4>GAMING</h4><p>I LOVE GAMING; I WORK TO HAVE SOME TIME TO PLAY MY GAMES</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MUSIC PLAYER SECTION ================= -->
+  <section class="section section--alt" id="music">
+    <div class="container">
+      <p class="section__eyebrow">// الموسيقى</p>
+      <h2 class="section__title">قائمة التشغيل المفضلة لدي</h2>
+      <p class="section__subtitle">الأغاني التي ترافقني أثناء الكتابة والبرمجة.</p>
+
+      <div class="player">
+        <div class="player__now-playing">
+          <div class="player__cover">
+            <img id="playerCover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&q=80" alt="غلاف الأغنية الحالية">
+            <div class="player__eq" id="playerEq"><span></span><span></span><span></span><span></span></div>
+          </div>
+
+          <div class="player__meta">
+            <h3 id="playerTitle">اسم الأغنية</h3>
+            <p id="playerArtist">اسم الفنان</p>
+
+            <div class="player__progress-wrap">
+              <span id="currentTime" class="player__time">0:00</span>
+              <input type="range" id="progressBar" class="player__progress" value="0" min="0" max="100" step="0.1">
+              <span id="durationTime" class="player__time">0:00</span>
+            </div>
+
+            <div class="player__controls">
+              <button id="prevBtn" class="player__btn" aria-label="السابق"><i class="fa-solid fa-backward-step"></i></button>
+              <button id="playBtn" class="player__btn player__btn--play" aria-label="تشغيل">
+                <i class="fa-solid fa-play" id="playIcon"></i>
+              </button>
+              <button id="nextBtn" class="player__btn" aria-label="التالي"><i class="fa-solid fa-forward-step"></i></button>
+
+              <div class="player__volume">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="player__playlist" id="playlist"></ul>
+        <audio id="audio" preload="metadata"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section class="section" id="contact">
+    <div class="container container--narrow">
+      <p class="section__eyebrow">// تواصل معي</p>
+      <h2 class="section__title">لنبنِ شيئًا معًا</h2>
+      <p class="section__subtitle">لديك مشروع أو فكرة؟ راسلني وسأرد عليك في أقرب وقت.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" placeholder="مثال: أحمد محمد" required>
+          <span class="form-error" id="nameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          <span class="form-error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">رسالتك</label>
+          <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">
+          إرسال الرسالة <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+        <p class="form-success" id="formSuccess">شكراً لتعاونك ووقتك! تم إرسال رسالتك بنجاح وسأتواصل معك قريباً 🎉✅</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> محمد أحمد. جميع الحقوق محفوظة.</p>
+      <div class="footer__socials">
+        <a href="https://github.com/186755g" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohamed-ahmed-abu-ali" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:mohamedd0103319@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
